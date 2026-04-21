@@ -1,17 +1,18 @@
 #!/bin/bash
 # =============================================================================
-# Script:      calculadora.sh
-# Descrição:   Realiza e exibe as quatro operações aritméticas básicas
-#              (soma, subtração, multiplicação e divisão) entre dois números.
+# Script:      calculadora_input.sh
+# Descrição:   Solicita dois números ao usuário e realiza as quatro operações
+#              aritméticas básicas (soma, subtração, multiplicação e divisão).
 # Autor:       Rafael Queiróz
 # Versão:      1.0.0
 # Data:        2026-04-21
-# Uso:         ./calculadora.sh
+# Uso:         ./calculadora_input.sh
 # =============================================================================
 
-# Define os operandos utilizados nas operações
-numero1=10
-numero2=5
+# Solicita os operandos ao usuário via terminal
+# O flag -p exibe a mensagem de prompt sem quebra de linha antes da entrada
+read -p "Digite o primeiro número: " numero1
+read -p "Digite o segundo número: " numero2
 
 # Calcula e exibe a soma entre numero1 e numero2
 # A sintaxe $(( )) é usada para avaliação de expressões aritméticas em bash

@@ -1,67 +1,89 @@
-#!/bin/bash
-# ==============================================================================
-# Exemplo de uso de todos os operadores de comparação numérica no Bash
-# ==============================================================================
+ #!/bin/bash
+# =============================================================================
+# Script:      comparacao_numeros.sh
+# Descrição:   Solicita três números ao usuário e demonstra o uso de todos
+#              os operadores de comparação numérica disponíveis no Bash,
+#              utilizando tanto a sintaxe [ ] quanto (( ))
+# Autor:       Rafael Queiróz
+# Versão:      1.0.0
+# Data:        2026-04-21
+# Uso:         ./comparacao_numeros.sh
+# =============================================================================
 
-A=10
-B=10
-C=5
+# Solicita os valores ao usuário via terminal
+read -p "Digite o primeiro valor:  " valor1
+read -p "Digite o segundo valor:   " valor2
+read -p "Digite o terceiro valor:  " valor3
 
-echo "Valores: A=$A  B=$B  C=$C"
+echo "=================================================="
+# Exibe os valores digitados, um por linha
+# O flag -e habilita a interpretação de caracteres especiais como \n (quebra de linha)
+echo -e "Valores digitados:\n valor1 = $valor1\n valor2 = $valor2\n valor3 = $valor3"
 echo "=================================================="
 
-# -eq (igual a): verifica se A é igual a B
-if [ "$A" -eq "$B" ]; then
-  echo "-eq:  A ($A) é igual a B ($B) ✔"
+# =============================================================================
+# Operadores com colchetes simples [ ]
+# Sintaxe compatível com sh e bash — recomendada para scripts portáveis
+# =============================================================================
+
+# -eq (equal): verifica se valor1 é igual a valor2
+if [ "$valor1" -eq "$valor2" ]; then
+  echo "-eq:  valor1 ($valor1) é igual a valor2 ($valor2) ✔"
 fi
 
-# -ne (diferente de): verifica se A é diferente de C
-if [ "$A" -ne "$C" ]; then
-  echo "-ne:  A ($A) não é igual a C ($C) ✔"
+# -ne (not equal): verifica se valor1 é diferente de valor3
+if [ "$valor1" -ne "$valor3" ]; then
+  echo "-ne:  valor1 ($valor1) não é igual a valor3 ($valor3) ✔"
 fi
 
-# -gt (maior que): verifica se A é maior que C
-if [ "$A" -gt "$C" ]; then
-  echo "-gt:  A ($A) é maior que C ($C) ✔"
+# -gt (greater than): verifica se valor1 é maior que valor3
+if [ "$valor1" -gt "$valor3" ]; then
+  echo "-gt:  valor1 ($valor1) é maior que valor3 ($valor3) ✔"
 fi
 
-# -ge (maior ou igual a): verifica se A é maior ou igual a B
-if [ "$A" -ge "$B" ]; then
-  echo "-ge:  A ($A) é maior ou igual a B ($B) ✔"
+# -ge (greater or equal): verifica se valor1 é maior ou igual a valor2
+if [ "$valor1" -ge "$valor2" ]; then
+  echo "-ge:  valor1 ($valor1) é maior ou igual a valor2 ($valor2) ✔"
 fi
 
-# -lt (menor que): verifica se C é menor que A
-if [ "$C" -lt "$A" ]; then
-  echo "-lt:  C ($C) é menor que A ($A) ✔"
+# -lt (less than): verifica se valor3 é menor que valor1
+if [ "$valor3" -lt "$valor1" ]; then
+  echo "-lt:  valor3 ($valor3) é menor que valor1 ($valor1) ✔"
 fi
 
-# -le (menor ou igual a): verifica se B é menor ou igual a A
-if [ "$B" -le "$A" ]; then
-  echo "-le:  B ($B) é menor ou igual a A ($A) ✔"
+# -le (less or equal): verifica se valor2 é menor ou igual a valor1
+if [ "$valor2" -le "$valor1" ]; then
+  echo "-le:  valor2 ($valor2) é menor ou igual a valor1 ($valor1) ✔"
 fi
 
 echo "--------------------------------------------------"
 echo "Operadores com parênteses duplos (( )):"
 echo "--------------------------------------------------"
 
-# < (menor que entre parênteses duplos): verifica se C é menor que A
-if (( "$C" < "$A" )); then
-  echo "<:    C ($C) é menor que A ($A) ✔"
+# =============================================================================
+# Operadores com parênteses duplos (( ))
+# Sintaxe exclusiva do bash — permite operadores aritméticos tradicionais
+# Vantagem: mais legível para quem vem de outras linguagens de programação
+# =============================================================================
+
+# < (less than): verifica se valor3 é menor que valor1
+if (( "$valor3" < "$valor1" )); then
+  echo "<:    valor3 ($valor3) é menor que valor1 ($valor1) ✔"
 fi
 
-# <= (menor ou igual a entre parênteses duplos): verifica se B é menor ou igual a A
-if (( "$B" <= "$A" )); then
-  echo "<=:   B ($B) é menor ou igual a A ($A) ✔"
+# <= (less or equal): verifica se valor2 é menor ou igual a valor1
+if (( "$valor2" <= "$valor1" )); then
+  echo "<=:   valor2 ($valor2) é menor ou igual a valor1 ($valor1) ✔"
 fi
 
-# > (maior que entre parênteses duplos): verifica se A é maior que C
-if (( "$A" > "$C" )); then
-  echo ">:    A ($A) é maior que C ($C) ✔"
+# > (greater than): verifica se valor1 é maior que valor3
+if (( "$valor1" > "$valor3" )); then
+  echo ">:    valor1 ($valor1) é maior que valor3 ($valor3) ✔"
 fi
 
-# >= (maior ou igual a entre parênteses duplos): verifica se A é maior ou igual a B
-if (( "$A" >= "$B" )); then
-  echo ">=:   A ($A) é maior ou igual a B ($B) ✔"
+# >= (greater or equal): verifica se valor1 é maior ou igual a valor2
+if (( "$valor1" >= "$valor2" )); then
+  echo ">=:   valor1 ($valor1) é maior ou igual a valor2 ($valor2) ✔"
 fi
 
 echo "=================================================="
