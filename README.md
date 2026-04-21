@@ -1,4 +1,4 @@
-# Shell Script — Estudos e Projetos
+# Shell Script
 
 <br />
 
@@ -40,40 +40,32 @@ Repositório dedicado ao aprendizado e prática de Shell Script (Bash), com scri
 
 ------
 
-## Scripts Disponíveis
-
-| Script       | Descrição                                                    |
-| ------------ | ------------------------------------------------------------ |
-| `monitor.sh` | Coleta dados de CPU, memória, disco e carga do sistema e gera relatório `.txt` |
-
-------
-
 ## Como Usar
 
 **1. Clone o repositório**
 
 ```bash
-git clone https://github.com/seu-usuario/curso_shell.git
+git clone https://github.com/rafaelq80/curso_shell_script.git
 cd curso_shell
 ```
 
-**2. Dê permissão de execução ao script**
+**2. Dê permissão de execução para cada script**
 
 ```bash
-chmod +x monitor.sh
+chmod +x nome_script.sh
 ```
 
 **3. Execute**
 
 ```bash
-./sistema/monitor.sh
+./nome_script.sh
 ```
 
 ------
 
 ## Pré-requisitos
 
-- Sistema operacional **Linux** ou **macOS**
+- Sistema operacional **Windows WSL-2 (Ubuntu)**, **Linux** ou **macOS**
 - Bash `>= 4.x`
 
 Verifique a versão do Bash:
@@ -105,7 +97,7 @@ sudo apt install shfmt
 
 2. Instale a Extensão do Visual Studio Code **mkhl.shfmt**, através do comando:
 
-```
+```bash
 code --install-extension mkhl.shfmt
 ```
 
@@ -121,8 +113,3 @@ code --install-extension mkhl.shfmt
 - [Explainshell](https://explainshell.com/) — explica cada parte de um comando
 - [SS64 — Bash Reference](https://ss64.com/bash/)
 
-------
-
-## Licença
-
-Distribuído sob a licença MIT. Veja [`LICENSE`](https://claude.ai/chat/LICENSE) para mais informações.
