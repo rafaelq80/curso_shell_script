@@ -33,6 +33,8 @@ Repositório dedicado ao aprendizado e prática de Shell Script (Bash), com scri
  ┣ 📂02_operadores
  ┣ 📂03_condicionais
  ┣ 📂04_repeticoes
+ ┣ 📂lab_251
+ ┣ 📂lab_253
  ┣ 📂monitoramento
  ┣ 📜.gitignore
  ┗ 📜README.md
@@ -82,7 +84,7 @@ bash --version
 | ------- | --------------------------------- | --------------------------------------------------- |
 | Aula 01 | Introdução ao Shell Script        | Primeiros passos, estrutura básica e saída de dados |
 | Aula 02 | Variáveis e Operadores            | Variáveis, constantes, `read`, operadores diversos  |
-| Aula 03 | Condicionais e Operadores Lógicos | `if/else/elif`, operadores relacionais e lógicos    |
+| Aula 03 | Condicionais e Operadores Lógicos | `if/else/elif`, `case`, operadores relacionais e lógicos    |
 | Aula 04 | Laços de Repetição                | Estruturas `for`, `while` e `until`                 |
 
 ------
